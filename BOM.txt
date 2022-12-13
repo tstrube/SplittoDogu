@@ -1,0 +1,26 @@
+Cost are for the position, rounded
+Most positions are bulk purchases and calculated down
+
+10 EUR  2 x PCB
+40 EUR  2 x Elite-C
+ 5 EUR  2 x SSD1306 128X32 OLED
+ 1 EUR  2 x TTRS Jack PJ-320A
+10 EUR  1 x TRRS cable, short
+ 5 EUR  6 x EC 11 Encoder /w button
+ 8 EUR  6 x Cap for EC 11
+20 EUR 72 x MX type switch
+ 2 EUR 76 x 1N4148 Diode
+ 3 EUR 34 x M3 Hex Standoff  8mm
+ 1 EUR 10 x M3 Hex Standoff 12mm 
+ 5 EUR 88 x M3 Screw (max 5mm long)
+ ? EUR  2 x 3D printed Sandwich Case
+20 EUR  1 x Keycap set
+
+Total 130 EUR
+
+
+
+Optional
+50 EUR  2 x Carbon Fiber Sandwich Case with Plexiglas cover
+
+Total 180 EUR

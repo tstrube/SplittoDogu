@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "timo")(type "KiCad")(uri "${KIPRJMOD}/timo.kicad_sym")(options "")(descr ""))
+)
