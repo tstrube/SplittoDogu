@@ -1,12 +1,13 @@
 # splittodogu
 
-![splittodogu](../Images/Layout_Default.png)
+![splittodogu1](../Images/Layout_Default.png)
+![splittodogu2](../Images/Layout_Game.png)
+![splittodogu3](../Images/Layout_FN.png)
 
 *A short description of the keyboard/project*
 
 * Keyboard Maintainer: [Timo Strube](https://github.com/tstrube)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Hardware Supported: [Custom PCB](https://github.com/tstrube/SplittoDogu)
 
 Make example for this keyboard (after setting up your build environment):
 
