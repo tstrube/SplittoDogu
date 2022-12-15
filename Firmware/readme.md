@@ -1,6 +1,6 @@
 # splittodogu
 
-![splittodogu](Images/Layout_Default.png)
+![splittodogu](../Images/Layout_Default.png)
 
 *A short description of the keyboard/project*
 
