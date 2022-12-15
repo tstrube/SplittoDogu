@@ -24,9 +24,16 @@ The last layer FN is for F1 to F12, arrow keys, and the keypad.
 ![Splitto Dogu Layout FN](Images/Layout_FN.png)
 
 ## PCB
-The PCB can be used for both sides. SImply bridge the jumper points under the OLED screen.
+The PCB can be used for both sides. Simply bridge the jumper points under the OLED screen.
 JP_L1 to JP_L6 for the left side, JP_Rx for the right.
 The Elite-C must be flipped. (See images)
 
 ![Splitto Dogu PCB](Images/PCB.jpg)
 ![Splitto Dogu Schematic](Images/Schematic.jpg)
+
+## Case
+The case is a simple sandwich case with a clear part covering the chip and screen.
+The main case uses 8mm standoffs, while the clear part uses 11mm. (See BOM)
+
+## BOM
+A list with all parts used and their approximate price as of March 2022.
