@@ -14,10 +14,7 @@ enum layers {
 };
 
 enum custom_keycodes {
-    TS_LBRC,
-    TS_RBRC,
-    TS_COMM,
-    TS_DOT
+    TS_BRC
 };
 
 // Windows
@@ -41,22 +38,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_DF] = LAYOUT(
         TSW_SAV,KC_ESC ,KC_1   ,KC_2   ,KC_3   ,KC_4   ,KC_5   ,KC_6   ,KC_GRV ,KC_7   ,KC_8   ,KC_9   ,KC_0   ,KC_MINS,KC_EQL ,TSW_END,
         TSW_CUT,KC_TAB ,KC_Q   ,KC_W   ,KC_E   ,KC_R   ,KC_T   ,KC_Y   ,KC_LBRC,KC_RBRC,KC_U   ,KC_I   ,KC_O   ,KC_P   ,KC_BSLS,KC_DEL ,
-        TSW_CPY,KC_LSFT,KC_A   ,KC_S   ,KC_D   ,KC_F   ,KC_G   ,TS_LBRC,TS_RBRC,KC_H   ,KC_J   ,KC_K   ,KC_L   ,KC_QUOT,KC_ENT ,KC_BSPC,
-        TSW_PST,KC_LCTL,KC_Z   ,KC_X   ,KC_C   ,KC_V   ,KC_B   ,KC_HOME,KC_END ,KC_N   ,KC_M   ,TS_COMM,TS_DOT ,KC_SLSH,KC_RSFT,KC_PSCR,
+        TSW_CPY,KC_LSFT,KC_A   ,KC_S   ,KC_D   ,KC_F   ,KC_G   ,TS_BRC ,KC_SCLN,KC_H   ,KC_J   ,KC_K   ,KC_L   ,KC_QUOT,KC_ENT ,KC_BSPC,
+        TSW_PST,KC_LCTL,KC_Z   ,KC_X   ,KC_C   ,KC_V   ,KC_B   ,KC_HOME,KC_END ,KC_N   ,KC_M   ,KC_COMM,KC_DOT ,KC_SLSH,KC_RSFT,KC_PSCR,
         TSW_LCK,KC_CAPS,KC_APP ,TO(_MC),MO(_FN),KC_LGUI,KC_LALT,KC_SPC ,KC_BSPC,MO(_FN),TG(_FN),KC_LOCK,TO(_GM),KC_MPLY,KC_MNXT,KC_MUTE
     ),
     [_MC] = LAYOUT(
         TSM_SAV,KC_ESC ,KC_1   ,KC_2   ,KC_3   ,KC_4   ,KC_5   ,KC_6   ,KC_GRV ,KC_7   ,KC_8   ,KC_9   ,KC_0   ,KC_MINS,KC_EQL ,TSM_END,
         TSM_CUT,KC_TAB ,KC_Q   ,KC_W   ,KC_E   ,KC_R   ,KC_T   ,KC_Y   ,KC_LBRC,KC_RBRC,KC_U   ,KC_I   ,KC_O   ,KC_P   ,KC_BSLS,KC_DEL ,
-        TSM_CPY,KC_LSFT,KC_A   ,KC_S   ,KC_D   ,KC_F   ,KC_G   ,TS_LBRC,TS_RBRC,KC_H   ,KC_J   ,KC_K   ,KC_L   ,KC_QUOT,KC_ENT ,KC_BSPC,
-        TSM_PST,KC_LCTL,KC_Z   ,KC_X   ,KC_C   ,KC_V   ,KC_B   ,KC_HOME,KC_END ,KC_N   ,KC_M   ,TS_COMM,TS_DOT ,KC_SLSH,KC_RSFT,KC_PSCR,
+        TSM_CPY,KC_LSFT,KC_A   ,KC_S   ,KC_D   ,KC_F   ,KC_G   ,TS_BRC ,KC_SCLN,KC_H   ,KC_J   ,KC_K   ,KC_L   ,KC_QUOT,KC_ENT ,KC_BSPC,
+        TSM_PST,KC_LCTL,KC_Z   ,KC_X   ,KC_C   ,KC_V   ,KC_B   ,KC_HOME,KC_END ,KC_N   ,KC_M   ,KC_COMM,KC_DOT ,KC_SLSH,KC_RSFT,KC_PSCR,
         TSM_LCK,KC_CAPS,KC_APP ,TO(_DF),MO(_FN),KC_LGUI,KC_LALT,KC_SPC ,KC_BSPC,MO(_FN),TG(_FN),KC_LOCK,TO(_GM),KC_MPLY,KC_MNXT,KC_MUTE
     ),
     [_GM] = LAYOUT(
         TSW_SAV,KC_ESC ,KC_1   ,KC_2   ,KC_3   ,KC_4   ,KC_5   ,KC_6   ,KC_MINS,KC_7   ,KC_8   ,KC_9   ,KC_0   ,KC_LBRC,KC_RBRC,TSW_END,
         TSW_CUT,KC_TAB ,KC_TAB ,KC_Q   ,KC_W   ,KC_E   ,KC_R   ,KC_T   ,KC_EQL ,KC_Y   ,KC_U   ,KC_I   ,KC_O   ,KC_P   ,KC_SLSH,KC_DEL ,
         TSW_CPY,KC_LSFT,KC_LSFT,KC_A   ,KC_S   ,KC_D   ,KC_F   ,KC_G   ,KC_BSLS,KC_H   ,KC_J   ,KC_K   ,KC_L   ,KC_QUOT,KC_ENT ,KC_BSPC,
-        TSW_PST,KC_LCTL,KC_LCTL,KC_Z   ,KC_X   ,KC_C   ,KC_V   ,KC_HOME,KC_END ,KC_B   ,KC_N   ,KC_M   ,TS_COMM,TS_DOT ,KC_RSFT,KC_PSCR,
+        TSW_PST,KC_LCTL,KC_LCTL,KC_Z   ,KC_X   ,KC_C   ,KC_V   ,KC_HOME,KC_END ,KC_B   ,KC_N   ,KC_M   ,KC_COMM,KC_DOT ,KC_RSFT,KC_PSCR,
         TSW_LCK,KC_CAPS,KC_APP ,TO(_MC),MO(_FN),KC_LALT,KC_LALT,KC_SPC ,KC_BSPC,MO(_FN),TG(_FN),KC_LOCK,TO(_DF),KC_MPLY,KC_MNXT,KC_MUTE
     ),
     [_FN] = LAYOUT(
@@ -79,11 +76,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // handle special keys
     switch (keycode) {
-        case TS_LBRC: // ( <
+        case TS_BRC: // ( )
             if (record->event.pressed) {
                 if (mods & MOD_MASK_SHIFT) {
-                    register_code(KC_COMM);
-                    unregister_code(KC_COMM);
+                    register_code(KC_0);
+                    unregister_code(KC_0);
                 } else {
                     register_code(KC_LSFT);
                     register_code(KC_9);
@@ -91,47 +88,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     unregister_code(KC_LSFT);
                 }
             }
-            return false;
-
-        case TS_RBRC: // ) >
-            if (record->event.pressed) {
-                if (mods & MOD_MASK_SHIFT) {
-                    register_code(KC_DOT);
-                    unregister_code(KC_DOT);
-                } else {
-                    register_code(KC_LSFT);
-                    register_code(KC_0);
-                    unregister_code(KC_0);
-                    unregister_code(KC_LSFT);
-                }
-            }
-            return false;
-
-        case TS_COMM: // , ;
-            if (record->event.pressed) {
-                if (mods & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    register_code(KC_SCLN);
-                    unregister_code(KC_SCLN);
-                    set_mods(mods);
-                } else {
-                    register_code(KC_COMMA);
-                    unregister_code(KC_COMMA);
-                }
-            }
-            return false;
-
-        case TS_DOT: // . :
-            if (record->event.pressed) {
-                if (mods & MOD_MASK_SHIFT) {
-                    register_code(KC_SCLN);
-                    unregister_code(KC_SCLN);
-                } else {
-                    register_code(KC_DOT);
-                    unregister_code(KC_DOT);
-                }
-            }
-            return false;
+            return false; 
     }
     return true;
 }
