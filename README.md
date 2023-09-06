@@ -10,12 +10,12 @@ The other screen is for Bongo Cat...
 
 ## Layouts
 There are two nearly identical default layouts. One for Windows and the other for MAC.
-The difference are key combinations for undo/redo and other hotkeys.
+The differences are key combinations for undo/redo and other hotkeys.
 
 ![Splitto Dogu Layout Default](Images/Layout_Default.png)
 
-Then there is a layer for gaming, which shifts most buttons to the right by one place.
-This is done to get WASD to the optimal position.
+Next is a layer for gaming, which shifts most buttons on the left half to the right by one key.
+This is moves WASD to the optimal position.
 
 ![Splitto Dogu Layout Game](Images/Layout_Game.png)
 
@@ -24,9 +24,10 @@ The last layer FN is for F1 to F12, arrow keys, and the keypad.
 ![Splitto Dogu Layout FN](Images/Layout_FN.png)
 
 ## PCB
-The PCB can be used for both sides. Simply bridge the jumper points under the OLED screen.
-JP_L1 to JP_L6 for the left side, JP_Rx for the right.
-The Elite-C must be flipped. (See images)
+The PCB can be used for both sides. It's possible to use one half without the other.
+So select which side a board is used for, bridge the jumper points under the OLED screen.
+JP_L1 to JP_L6 for the left side, JP_R1 to JP_R6 for the right.
+The Elite-C must be flipped depending on the side. (See images)
 
 ![Splitto Dogu PCB](Images/PCB.jpg)
 ![Splitto Dogu Schematic](Images/Schematic.jpg)
