@@ -40,21 +40,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TSW_CUT,KC_TAB ,KC_Q   ,KC_W   ,KC_E   ,KC_R   ,KC_T   ,KC_Y   ,KC_LBRC,KC_RBRC,KC_U   ,KC_I   ,KC_O   ,KC_P   ,KC_BSLS,KC_DEL ,
         TSW_CPY,KC_LSFT,KC_A   ,KC_S   ,KC_D   ,KC_F   ,KC_G   ,TS_BRC ,KC_SCLN,KC_H   ,KC_J   ,KC_K   ,KC_L   ,KC_QUOT,KC_ENT ,KC_BSPC,
         TSW_PST,KC_LCTL,KC_Z   ,KC_X   ,KC_C   ,KC_V   ,KC_B   ,KC_HOME,KC_END ,KC_N   ,KC_M   ,KC_COMM,KC_DOT ,KC_SLSH,KC_RSFT,KC_PSCR,
-        TSW_LCK,KC_CAPS,KC_APP ,TO(_MC),MO(_FN),KC_LGUI,KC_LALT,KC_SPC ,KC_BSPC,MO(_FN),TG(_FN),KC_LOCK,TO(_GM),KC_MPLY,KC_MNXT,KC_MUTE
+        TSW_LCK,KC_CAPS,KC_APP ,TO(_MC),MO(_FN),KC_LGUI,KC_LALT,KC_SPC ,KC_BSPC,MO(_FN),TG(_FN),KC_NO,TO(_GM),KC_MPLY,KC_MNXT,KC_MUTE
     ),
     [_MC] = LAYOUT(
         TSM_SAV,KC_ESC ,KC_1   ,KC_2   ,KC_3   ,KC_4   ,KC_5   ,KC_6   ,KC_GRV ,KC_7   ,KC_8   ,KC_9   ,KC_0   ,KC_MINS,KC_EQL ,TSM_END,
         TSM_CUT,KC_TAB ,KC_Q   ,KC_W   ,KC_E   ,KC_R   ,KC_T   ,KC_Y   ,KC_LBRC,KC_RBRC,KC_U   ,KC_I   ,KC_O   ,KC_P   ,KC_BSLS,KC_DEL ,
         TSM_CPY,KC_LSFT,KC_A   ,KC_S   ,KC_D   ,KC_F   ,KC_G   ,TS_BRC ,KC_SCLN,KC_H   ,KC_J   ,KC_K   ,KC_L   ,KC_QUOT,KC_ENT ,KC_BSPC,
         TSM_PST,KC_LCTL,KC_Z   ,KC_X   ,KC_C   ,KC_V   ,KC_B   ,KC_HOME,KC_END ,KC_N   ,KC_M   ,KC_COMM,KC_DOT ,KC_SLSH,KC_RSFT,KC_PSCR,
-        TSM_LCK,KC_CAPS,KC_APP ,TO(_DF),MO(_FN),KC_LGUI,KC_LALT,KC_SPC ,KC_BSPC,MO(_FN),TG(_FN),KC_LOCK,TO(_GM),KC_MPLY,KC_MNXT,KC_MUTE
+        TSM_LCK,KC_CAPS,KC_APP ,TO(_DF),MO(_FN),KC_LGUI,KC_LALT,KC_SPC ,KC_BSPC,MO(_FN),TG(_FN),KC_NO,TO(_GM),KC_MPLY,KC_MNXT,KC_MUTE
     ),
     [_GM] = LAYOUT(
         TSW_SAV,KC_ESC ,KC_1   ,KC_2   ,KC_3   ,KC_4   ,KC_5   ,KC_6   ,KC_MINS,KC_7   ,KC_8   ,KC_9   ,KC_0   ,KC_LBRC,KC_RBRC,TSW_END,
         TSW_CUT,KC_TAB ,KC_TAB ,KC_Q   ,KC_W   ,KC_E   ,KC_R   ,KC_T   ,KC_EQL ,KC_Y   ,KC_U   ,KC_I   ,KC_O   ,KC_P   ,KC_SLSH,KC_DEL ,
         TSW_CPY,KC_LSFT,KC_LSFT,KC_A   ,KC_S   ,KC_D   ,KC_F   ,KC_G   ,KC_BSLS,KC_H   ,KC_J   ,KC_K   ,KC_L   ,KC_QUOT,KC_ENT ,KC_BSPC,
         TSW_PST,KC_LCTL,KC_LCTL,KC_Z   ,KC_X   ,KC_C   ,KC_V   ,KC_HOME,KC_END ,KC_B   ,KC_N   ,KC_M   ,KC_COMM,KC_DOT ,KC_RSFT,KC_PSCR,
-        TSW_LCK,KC_CAPS,KC_APP ,TO(_MC),MO(_FN),KC_LALT,KC_LALT,KC_SPC ,KC_BSPC,MO(_FN),TG(_FN),KC_LOCK,TO(_DF),KC_MPLY,KC_MNXT,KC_MUTE
+        TSW_LCK,KC_CAPS,KC_APP ,TO(_MC),MO(_FN),KC_LALT,KC_LALT,KC_SPC ,KC_BSPC,MO(_FN),TG(_FN),KC_NO,TO(_DF),KC_MPLY,KC_MNXT,KC_MUTE
     ),
     [_FN] = LAYOUT(
         QK_BOOT,_______,KC_F1  ,KC_F2  ,KC_F3  ,KC_F4  ,KC_F5  ,KC_F6  ,_______,KC_F7  ,KC_F8  ,KC_F9  ,KC_F10 ,KC_F11 ,KC_F12 ,QK_BOOT,
@@ -88,7 +88,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     unregister_code(KC_LSFT);
                 }
             }
-            return false; 
+            return false;
     }
     return true;
 }
@@ -155,7 +155,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
                 register_code(KC_Z);
                 unregister_code(KC_Z);
                 if (clockwise) unregister_code(KC_LSFT);
-                unregister_code(KC_LCMD);                
+                unregister_code(KC_LCMD);
             } else {
                 register_code(KC_LCTL);
                 register_code(clockwise ? KC_Y : KC_Z);

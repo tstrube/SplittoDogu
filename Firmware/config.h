@@ -3,8 +3,6 @@
 
 #pragma once
 
-#include "config_common.h"
-
 #define MATRIX_COLS 8
 #define MATRIX_ROWS 10
 #define MATRIX_COL_PINS { B2, B6, B3, B1, F7, F6, F5, F4 }
