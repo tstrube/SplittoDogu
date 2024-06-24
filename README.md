@@ -2,8 +2,11 @@
 QMK firmware for split keyboard with screens and encoders
 
 This is a split keyboard with encoders for arrow keys, mouse wheels, page up/down, and undo/redo.
-One of the two screens shows the active layer and status of Num and Caps.
-The other screen is for Bongo Cat...
+One of the two screens shows the active layer and status of Num and Caps. The other screen is for Bongo Cat...
+
+It's also possible to use one side only. (Garming or Macro Keyboard)
+
+Optional components: screens, encoder, buttons...
 
 ![Splitto Dogu with Caps](Images/WithCaps.jpg)
 ![Splitto Dogu without Caps](Images/NoCaps.jpg)
@@ -38,3 +41,11 @@ The main case uses 8mm standoffs, while the clear part uses 11mm. (See BOM)
 
 ## BOM
 A list with all parts used and their approximate price as of March 2022.
+
+## Crypto Donations
+
+- **BTC:** bc1qqa9skjw0av0dnpzl53dhapgllw9nxpr3e3ncg6
+- **DOGE:** D6Skk3K4H8KZWc7WcG69Ki5mkXc3f8pscc
+- **ETH:** 0x7370eD840A690010eEF5726D71eEa54a9F45A202
+- **SOL:** FipyS8kETFE8XRMkDez1nRRNe1n94Etws15UQfvzRsgg
+- **XCH:** xch10t2jmnrnq8295pxqdtvn4pp5dgdcm7aar5usz0e4e57xyyjegtuqxwtq9z
